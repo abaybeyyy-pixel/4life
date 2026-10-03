@@ -29,20 +29,20 @@ export default function TestimonialsSection() {
 
   return (
     <section className="pt-8 border-t border-gray-200 space-y-8">
-      <div className="text-center max-w-3xl mx-auto space-y-2 px-4">
+      <div className="text-center max-w-3xl mx-auto space-y-2 px-2 sm:px-4">
         <span className="text-xs uppercase tracking-widest font-bold text-gray-500">
           Pengalaman Nyata
         </span>
-        <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900">
           Apa Kata Mereka yang Sudah Mencoba?
         </h2>
-        <p className="text-sm text-gray-500 leading-relaxed">
+        <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
           Pengalaman nyata dari konsumen dan praktisi kesehatan yang merasakan manfaat Transfer Factor.
         </p>
       </div>
 
       {/* Filter and Search Controls */}
-      <div className="max-w-4xl mx-auto px-4 flex flex-col md:flex-row gap-4 items-center justify-between">
+      <div className="max-w-4xl mx-auto px-2 sm:px-4 flex flex-col md:flex-row gap-3 sm:gap-4 items-center justify-between">
         <div className="flex bg-gray-100 p-1 rounded-xl w-full md:w-auto">
           {(["Semua", "Konsumen", "Mitra"] as const).map((role) => (
             <button
@@ -51,7 +51,7 @@ export default function TestimonialsSection() {
                 setActiveTab(role);
                 setVisibleCount(6);
               }}
-              className={`flex-1 md:flex-none px-5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              className={`flex-1 md:flex-none px-3 sm:px-5 py-2 rounded-lg text-[11px] sm:text-xs font-bold transition-all cursor-pointer ${
                 activeTab === role
                   ? "bg-white text-gray-900 shadow-sm"
                   : "text-gray-500 hover:text-gray-900"
@@ -78,11 +78,11 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Grid of Testimonials */}
-      <div className="max-w-7xl mx-auto px-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {displayedTestimonials.map((t) => (
           <div
             key={t.id}
-            className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-gray-300 transition-colors flex flex-col justify-between relative group"
+            className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 hover:border-gray-300 transition-colors flex flex-col justify-between relative group"
           >
             <Quote className="absolute right-6 top-6 w-8 h-8 text-gray-100 group-hover:scale-110 transition-transform duration-300" />
 

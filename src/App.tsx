@@ -121,7 +121,7 @@ export default function App() {
         onOpenConsultation={handleOpenConsultation}
       />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-24">
+      <main className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8 space-y-12 sm:space-y-18 md:space-y-24">
         
         {/* Unified Main Content */}
         <div id="home">
@@ -137,17 +137,17 @@ export default function App() {
         </div>
 
         {/* FAQs */}
-        <section id="faq" className="space-y-8 pt-8 border-t border-gray-200 scroll-mt-20">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
+        <section id="faq" className="space-y-6 sm:space-y-8 pt-8 border-t border-gray-200 scroll-mt-20">
+          <div className="text-center max-w-2xl mx-auto space-y-2 px-2">
             <span className="text-xs uppercase tracking-widest font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
               Pusat Informasi & Tanya Jawab
             </span>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">Pertanyaan yang Sering Ditanyakan</h2>
-            <p className="text-xs md:text-sm text-gray-500">Ketahui kebenaran ilmiah, legalitas BPOM, dan fakta seputar 4Life Indonesia secara transparan.</p>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900">Pertanyaan yang Sering Ditanyakan</h2>
+            <p className="text-xs sm:text-sm text-gray-500">Ketahui kebenaran ilmiah, legalitas BPOM, dan fakta seputar 4Life Indonesia secara transparan.</p>
           </div>
 
           {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 max-w-3xl mx-auto px-2">
             {["Semua", "Sains & Khasiat", "Legalitas BPOM", "Cara Konsumsi", "Kemitraan"].map((cat) => (
               <button
                 key={cat}
@@ -155,7 +155,7 @@ export default function App() {
                   setFaqCategory(cat);
                   setFaqOpenIdx(null);
                 }}
-                className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                className={`px-3 sm:px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-bold transition-all cursor-pointer ${
                   faqCategory === cat
                     ? "bg-blue-600 text-white shadow-xs"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -167,25 +167,25 @@ export default function App() {
           </div>
 
           {/* Accordion List */}
-          <div className="max-w-3xl mx-auto space-y-3 px-4">
+          <div className="max-w-3xl mx-auto space-y-2.5 sm:space-y-3 px-1 sm:px-4">
             {filteredFaqs.map((faq, idx) => (
               <div 
                 key={idx} 
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all hover:border-gray-300"
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all hover:border-gray-300 shadow-xs"
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 font-bold text-xs md:text-sm text-gray-900 hover:bg-gray-50/80 cursor-pointer"
+                  className="w-full text-left px-4 sm:px-5 py-3.5 sm:py-4 flex items-center justify-between gap-3 sm:gap-4 font-bold text-xs sm:text-sm text-gray-900 hover:bg-gray-50/80 cursor-pointer"
                 >
-                  <span className="flex items-center gap-2.5">
+                  <span className="flex items-center gap-2 sm:gap-2.5">
                     <HelpCircle className="w-4 h-4 text-blue-600 shrink-0" />
-                    {faq.q}
+                    <span>{faq.q}</span>
                   </span>
                   {faqOpenIdx === idx ? <ChevronUp className="w-4 h-4 text-gray-400 shrink-0" /> : <ChevronDown className="w-4 h-4 text-gray-400 shrink-0" />}
                 </button>
                 
                 {faqOpenIdx === idx && (
-                  <div className="px-5 pb-5 pt-1 text-xs text-gray-600 leading-relaxed border-t border-gray-100 bg-gray-50/40">
+                  <div className="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs text-gray-600 leading-relaxed border-t border-gray-100 bg-gray-50/40">
                     <p>{faq.a}</p>
                     <div className="flex flex-wrap gap-1.5 mt-3">
                       {faq.tags.map((tag, i) => (
@@ -203,25 +203,25 @@ export default function App() {
 
         {/* Interactive WA Message Simulator */}
         <section id="wa-simulator" className="pt-8 border-t border-gray-200 scroll-mt-20">
-          <div className="bg-gradient-to-br from-gray-50 to-blue-50/30 border border-gray-200 rounded-3xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-8 shadow-xs">
-            <div className="flex-1 space-y-4 text-left">
+          <div className="bg-gradient-to-br from-gray-50 to-blue-50/30 border border-gray-200 rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 sm:gap-8 shadow-xs">
+            <div className="flex-1 space-y-3 sm:space-y-4 text-left">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-gray-200 text-gray-800 uppercase tracking-wider">
                 Konsultasi WhatsApp
               </span>
-              <h2 className="text-2xl font-bold text-gray-900 leading-tight">Konsultasi Langsung via WhatsApp</h2>
-              <p className="text-xs text-gray-600 leading-relaxed">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight">Konsultasi Langsung via WhatsApp</h2>
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 Tulis pesan konsultasi Anda. Saat menekan kirim, Anda akan diarahkan langsung ke admin WhatsApp resmi dengan draft pesan yang sudah terformat.
               </p>
-              <div className="bg-white p-4 rounded-xl border border-gray-200 space-y-1">
+              <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-gray-200 space-y-1">
                 <span className="text-[10px] font-bold text-gray-700 uppercase block">Kantor Layanan Resmi:</span>
-                <span className="text-xs text-gray-600 leading-relaxed block">
+                <span className="text-[11px] sm:text-xs text-gray-600 leading-relaxed block">
                   Telepon: 021-1234-5678 (Senin - Jumat: 09.00 - 17.00 WIB)
                 </span>
                 <span className="text-[9px] text-gray-400 block font-bold">PT 4Life Indonesia Trading - Cyber 2 Tower Jakarta</span>
               </div>
             </div>
 
-            <div className="w-full md:w-96 bg-white border border-gray-200 p-5 rounded-2xl space-y-4 text-left">
+            <div className="w-full md:w-96 bg-white border border-gray-200 p-4 sm:p-5 rounded-2xl space-y-3 sm:space-y-4 text-left shadow-xs">
               <div className="flex items-center justify-between border-b border-gray-200 pb-2">
                 <span className="text-xs font-bold text-gray-800 flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block" />
@@ -243,7 +243,7 @@ export default function App() {
 
               <button
                 onClick={handleSendWhatsApp}
-                className="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                className="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
               >
                 <Send className="w-4 h-4" /> Kirim ke WhatsApp &rarr;
               </button>
@@ -253,17 +253,17 @@ export default function App() {
 
         {/* Kantor Pusat Map Section */}
         <section id="lokasi" className="pt-8 border-t border-gray-200 scroll-mt-20 text-left">
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-10 space-y-6">
+          <div className="bg-white border border-gray-200 rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 space-y-5 sm:space-y-6 shadow-xs">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div className="space-y-2">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-gray-100 text-gray-700 uppercase tracking-wider">
                   Lokasi Kantor Pusat
                 </span>
-                <h2 className="text-2xl font-bold text-gray-900 leading-tight flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-gray-500" />
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-gray-500 shrink-0" />
                   PT 4Life Indonesia Trading
                 </h2>
-                <p className="text-xs text-gray-500 leading-relaxed max-w-xl">
+                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-xl">
                   Cyber 2 Tower Lantai 6, Jl. H.R. Rasuna Said Blok X-5 No. 13, RT.7/RW.2, Kuningan Timur, Setiabudi, Jakarta Selatan, DKI Jakarta 12950.
                 </p>
               </div>
@@ -271,13 +271,13 @@ export default function App() {
                 href="https://maps.app.goo.gl/6j6kPHzqEG2Dzn8H7" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-bold text-xs transition-colors shrink-0 text-center"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-bold text-xs transition-colors shrink-0 text-center shadow-xs"
               >
                 Buka di Google Maps
               </a>
             </div>
             
-            <div className="w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-gray-200">
+            <div className="w-full h-64 sm:h-80 md:h-96 rounded-xl sm:rounded-2xl overflow-hidden border border-gray-200">
               <iframe
                 title="Google Map Kantor Pusat PT 4Life Indonesia Trading"
                 src="https://maps.google.com/maps?q=Cyber%202%20Tower%20Jakarta&t=&z=16&ie=UTF8&iwloc=&output=embed"
@@ -300,10 +300,10 @@ export default function App() {
       />
 
       {/* Brand Footer */}
-      <footer className="mt-16 bg-gray-900 text-white border-t border-gray-800 py-12 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <footer className="mt-12 sm:mt-16 bg-gray-900 text-white border-t border-gray-800 py-8 sm:py-12 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           
-          <div className="space-y-3">
+          <div className="space-y-2 sm:space-y-3">
             <span className="text-base font-extrabold text-white tracking-tight">4Life Indonesia</span>
             <p className="text-[11px] text-gray-400 leading-relaxed max-w-xs">
               Portal edukasi sistem imun keluarga berbasis riset ilmiah dan data klinis internasional.
@@ -344,33 +344,33 @@ export default function App() {
 
         </div>
 
-        <div className="max-w-7xl mx-auto pt-8 mt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-gray-500">
+        <div className="max-w-7xl mx-auto pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-[10px] text-gray-500 text-center sm:text-left">
           <p>&copy; {new Date().getFullYear()} PT 4Life Indonesia Trading. All Rights Reserved.</p>
           <p className="italic">Suplemen Kesehatan — Bukan untuk mendiagnosa, mengobati, atau mencegah penyakit.</p>
         </div>
       </footer>
 
       {/* Floating Action Buttons */}
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-none">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5 sm:gap-3 pointer-events-none">
         {/* Back To Top */}
         {showBackToTop && (
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             aria-label="Kembali ke atas"
-            className="pointer-events-auto p-3 rounded-full bg-white text-gray-700 hover:text-blue-600 border border-gray-200 shadow-lg hover:shadow-xl transition-all cursor-pointer group"
+            className="pointer-events-auto p-2.5 sm:p-3 rounded-full bg-white text-gray-700 hover:text-blue-600 border border-gray-200 shadow-lg hover:shadow-xl transition-all cursor-pointer group"
           >
-            <ArrowUp className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5 group-hover:-translate-y-0.5 transition-transform" />
           </button>
         )}
 
         {/* Floating WhatsApp Action Button */}
         <button
           onClick={() => handleOpenConsultation("Halo Admin 4Life, saya ingin berkonsultasi seputar produk Transfer Factor untuk kesehatan keluarga.")}
-          className="pointer-events-auto flex items-center gap-2.5 px-4 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full shadow-xl hover:shadow-2xl transition-all cursor-pointer group hover:scale-105"
+          className="pointer-events-auto flex items-center gap-2 sm:gap-2.5 p-3 sm:px-4 sm:py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full shadow-xl hover:shadow-2xl transition-all cursor-pointer group hover:scale-105"
         >
-          <span className="relative flex h-3 w-3">
+          <span className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-white"></span>
           </span>
           <MessageCircle className="w-5 h-5" />
           <span className="text-xs font-bold pr-1 hidden sm:inline">Konsultasi WhatsApp</span>

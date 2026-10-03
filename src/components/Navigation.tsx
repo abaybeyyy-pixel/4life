@@ -157,10 +157,17 @@ export default function Navigation({ onOpenConsultation }: NavigationProps) {
               📜 Sertifikasi
             </button>
             <button
-              onClick={() => handleScroll("lokasi")}
+              onClick={() => handleScroll("faq")}
               className="p-2.5 bg-gray-50 hover:bg-blue-50 hover:text-blue-700 text-gray-700 rounded-xl text-left transition-colors"
             >
-              📍 Lokasi Kantor
+              ❓ Tanya Jawab
+            </button>
+            <button
+              onClick={() => handleScroll("lokasi")}
+              className="col-span-2 p-2.5 bg-gray-50 hover:bg-blue-50 hover:text-blue-700 text-gray-700 rounded-xl text-left transition-colors flex items-center justify-between"
+            >
+              <span>📍 Lokasi Kantor Pusat</span>
+              <span className="text-[10px] text-gray-400">Cyber 2 Tower &rarr;</span>
             </button>
           </div>
           <div className="pt-2 flex gap-2">
