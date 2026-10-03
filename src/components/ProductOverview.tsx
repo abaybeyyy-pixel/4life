@@ -203,7 +203,7 @@ export default function ProductOverview({ onSelectProduct, onOpenConsultation }:
         <div id="sertifikasi" className="scroll-mt-20 grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-blue-300 hover:bg-blue-50/5 transition-all">
             <div className="aspect-[4/3] overflow-hidden bg-gray-50">
-              <img src="/serti.png" alt="Sertifikasi Resmi 4Life Transfer Factor" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              <img src="/serti.webp" alt="Sertifikasi Resmi 4Life Transfer Factor" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="p-4 sm:p-5 space-y-1 text-left">
               <span className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded uppercase inline-block">Dokumen Legalitas</span>
@@ -214,7 +214,7 @@ export default function ProductOverview({ onSelectProduct, onOpenConsultation }:
 
           <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-blue-300 hover:bg-blue-50/5 transition-all">
             <div className="aspect-[4/3] overflow-hidden bg-gray-50">
-              <img src="/paten.png" alt="Paten Ilmiah 4Life Transfer Factor" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              <img src="/paten.webp" alt="Paten Ilmiah 4Life Transfer Factor" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="p-4 sm:p-5 space-y-1 text-left">
               <span className="text-[10px] font-bold text-gray-600 bg-gray-100 px-2 py-0.5 rounded uppercase inline-block">Hak Paten Eksklusif</span>
@@ -749,7 +749,7 @@ export default function ProductOverview({ onSelectProduct, onOpenConsultation }:
           <div className="grid sm:grid-cols-2 gap-5">
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-blue-300 hover:bg-blue-50/5 transition-all">
               <div className="aspect-[16/10] overflow-hidden bg-gray-50">
-                <img src="/penghargaan.png" alt="Penghargaan Internasional 4Life" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img src="/penghargaan.webp" alt="Penghargaan Internasional 4Life" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-4 sm:p-5 space-y-1 text-left">
                 <span className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded uppercase inline-block">Penghargaan Global</span>
@@ -760,7 +760,7 @@ export default function ProductOverview({ onSelectProduct, onOpenConsultation }:
 
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-blue-300 hover:bg-blue-50/5 transition-all">
               <div className="aspect-[16/10] overflow-hidden bg-gray-50">
-                <img src="/penghargaan2.png" alt="Global 100 Awards 4Life" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img src="/penghargaan2.webp" alt="Global 100 Awards 4Life" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-4 sm:p-5 space-y-1 text-left">
                 <span className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded uppercase inline-block">Global 100 Awards</span>
@@ -776,7 +776,7 @@ export default function ProductOverview({ onSelectProduct, onOpenConsultation }:
           <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-xs">
             <div className="grid md:grid-cols-2 items-center">
               <div className="aspect-[4/3] md:aspect-auto md:h-full overflow-hidden bg-gray-50">
-                <img src="/midwife_consultation.png" alt="Konsultasi Praktisi Kesehatan tentang Transfer Factor" className="w-full h-full object-cover" />
+                <img src="/midwife_consultation.webp" alt="Konsultasi Praktisi Kesehatan tentang Transfer Factor" loading="lazy" className="w-full h-full object-cover" />
               </div>
               <div className="p-5 sm:p-8 space-y-3 text-left">
                 <span className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded uppercase inline-block">Edukasi Kesehatan</span>
@@ -919,8 +919,9 @@ export default function ProductOverview({ onSelectProduct, onOpenConsultation }:
                 <div className="p-5 sm:p-7 space-y-4 text-left">
                   <div className="w-full h-44 sm:h-52 flex items-center justify-center bg-gray-50 rounded-2xl overflow-hidden relative p-3 sm:p-4">
                     <img 
-                      src={prod.id === "tf-tri-factor" ? "/produk.png" : "/produk2.png"} 
+                      src={prod.id === "tf-tri-factor" ? "/produk.webp" : "/produk2.webp"} 
                       alt={prod.name} 
+                      loading="lazy"
                       className="max-h-36 sm:max-h-44 object-contain transform group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-xs px-2.5 py-1 rounded-full text-[10px] font-bold text-gray-700 border border-gray-200 shadow-xs">

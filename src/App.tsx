@@ -12,9 +12,7 @@ import {
   Send, 
   MapPin, 
   MessageCircle, 
-  ArrowUp,
-  ShieldCheck,
-  CheckCircle2
+  ArrowUp
 } from "lucide-react";
 
 export default function App() {
@@ -337,7 +335,7 @@ export default function App() {
             <span className="text-gray-300 block">Telepon: (021) 1234-5678</span>
             <span className="text-gray-300 block font-mono mb-2">support-id@4life.com</span>
             <div className="mt-4 bg-white rounded-xl overflow-hidden border border-gray-700 w-full max-w-[180px]">
-              <img src="/kantorpusatindo.png" alt="Gedung Kantor Pusat 4Life Indonesia" className="w-full h-auto object-cover" />
+              <img src="/kantorpusatindo.webp" alt="Gedung Kantor Pusat 4Life Indonesia" loading="lazy" className="w-full h-auto object-cover" />
               <div className="bg-gray-800 text-[9px] text-center py-1.5 font-bold text-gray-300">Kantor Pusat 4Life ID</div>
             </div>
           </div>

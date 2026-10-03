@@ -11,7 +11,7 @@ interface ProductDetailModalProps {
 export default function ProductDetailModal({ product, onClose, onOpenConsultation }: ProductDetailModalProps) {
   if (!product) return null;
 
-  const productImage = product.id === "tf-tri-factor" ? "/produk.png" : "/produk2.png";
+  const productImage = product.id === "tf-tri-factor" ? "/produk.webp" : "/produk2.webp";
   const formatRupiah = (val: number) => new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(val);
   const savings = product.priceRetail - product.priceMember;
 
