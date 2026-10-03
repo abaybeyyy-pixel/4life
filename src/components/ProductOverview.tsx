@@ -111,59 +111,52 @@ export default function ProductOverview({ onSelectProduct, onOpenConsultation }:
             </div>
           </div>
 
-          {/* Right Column: Hero Visual Product Showcase */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-3xl overflow-hidden border border-gray-700/60 shadow-2xl bg-gradient-to-b from-gray-900 via-gray-800 to-gray-950 p-6 md:p-8 space-y-6">
-              
-              {/* Product Duo Showcase */}
-              <div className="grid grid-cols-2 gap-4">
-                {/* Product 1: Tri-Factor */}
+          {/* Right Column: Key Pillars & Product Highlights (No Images) */}
+          <div className="lg:col-span-5 relative space-y-4">
+            <div className="bg-gray-900/90 border border-gray-800 rounded-3xl p-6 md:p-8 space-y-5 shadow-2xl text-left">
+              <div className="space-y-1">
+                <span className="text-[10px] font-extrabold text-sky-400 uppercase tracking-widest block">Keunggulan Formula</span>
+                <h3 className="text-xl font-extrabold text-white">Standar Emas Imunologi Dunia</h3>
+                <p className="text-xs text-gray-400">Pendidikan kecerdasan pertahanan tubuh berbasis riset ilmiah molekuler.</p>
+              </div>
+
+              <div className="grid gap-3">
                 <div 
                   onClick={() => onSelectProduct("tf-tri-factor")}
-                  className="bg-gray-800/80 hover:bg-gray-800 border border-gray-700/80 hover:border-blue-500/50 p-4 rounded-2xl flex flex-col items-center text-center transition-all cursor-pointer group/card shadow-md"
+                  className="bg-gray-800/70 hover:bg-gray-800 border border-gray-700/70 hover:border-blue-500/50 p-4 rounded-2xl transition-all cursor-pointer group/item"
                 >
-                  <div className="h-32 w-full flex items-center justify-center p-2 mb-2 bg-gray-900/50 rounded-xl">
-                    <img 
-                      src="/produk.png" 
-                      alt="TF Tri-Factor Formula" 
-                      className="max-h-28 object-contain transform group-hover/card:scale-105 transition-transform duration-300"
-                    />
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold text-sky-400 uppercase tracking-wider">Harian Seluruh Keluarga</span>
+                    <span className="text-xs text-gray-400 group-hover/item:text-white transition-colors">Detail &rarr;</span>
                   </div>
-                  <span className="text-[9px] font-bold text-sky-400 bg-sky-500/10 px-2 py-0.5 rounded-full mb-1">Daya Tahan Harian</span>
-                  <h4 className="text-xs font-bold text-white leading-tight">TF Tri-Factor®</h4>
-                  <p className="text-[10px] text-gray-400 mt-1">Fondasi Kecerdasan Imun</p>
+                  <h4 className="text-sm font-bold text-white mt-1">4Life Transfer Factor® Tri-Factor® Formula</h4>
+                  <p className="text-xs text-gray-400 mt-1 leading-relaxed">
+                    600mg Transfer Factor murni untuk melatih dan menyeimbangkan respons sel imun setiap hari.
+                  </p>
                 </div>
 
-                {/* Product 2: TF Plus */}
                 <div 
                   onClick={() => onSelectProduct("tf-plus")}
-                  className="bg-gray-800/80 hover:bg-gray-800 border border-gray-700/80 hover:border-sky-500/50 p-4 rounded-2xl flex flex-col items-center text-center transition-all cursor-pointer group/card shadow-md"
+                  className="bg-gray-800/70 hover:bg-gray-800 border border-gray-700/70 hover:border-sky-500/50 p-4 rounded-2xl transition-all cursor-pointer group/item"
                 >
-                  <div className="h-32 w-full flex items-center justify-center p-2 mb-2 bg-gray-900/50 rounded-xl">
-                    <img 
-                      src="/produk2.png" 
-                      alt="TF Plus Formula" 
-                      className="max-h-28 object-contain transform group-hover/card:scale-105 transition-transform duration-300"
-                    />
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">Perlindungan Maksimal (+437%)</span>
+                    <span className="text-xs text-gray-400 group-hover/item:text-white transition-colors">Detail &rarr;</span>
                   </div>
-                  <span className="text-[9px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full mb-1">Proteksi Maksimal</span>
-                  <h4 className="text-xs font-bold text-white leading-tight">TF Plus® Formula</h4>
-                  <p className="text-[10px] text-gray-400 mt-1">Pemulihan + Seng & Cordyvant</p>
+                  <h4 className="text-sm font-bold text-white mt-1">4Life Transfer Factor Plus® Tri-Factor® Formula</h4>
+                  <p className="text-xs text-gray-400 mt-1 leading-relaxed">
+                    Diperkuat Zink dan Cordyvant™ untuk mendongkrak aktivitas sel pertahanan saat kelelahan berat atau pemulihan.
+                  </p>
                 </div>
               </div>
 
-              {/* Floating Molecule Badge */}
-              <div className="bg-gray-950/90 border border-gray-800 p-4 rounded-2xl flex items-center gap-3.5 shadow-lg">
-                <div className="w-12 h-12 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center shrink-0 p-1">
-                  <img src="/transfer_factor.png" alt="Transfer Factor Molecule" className="w-full h-full object-contain" />
-                </div>
-                <div className="text-left text-xs">
-                  <span className="text-[10px] font-extrabold text-sky-400 uppercase tracking-wider block">Standar Emas Imunologi</span>
-                  <span className="font-bold text-white block">Tingkatkan Sel NK hingga +437%</span>
-                  <span className="text-[10px] text-gray-400">Terdaftar Resmi di Physicians' Desk Reference (PDR) USA</span>
-                </div>
+              {/* Verified Clinical Stat Pill */}
+              <div className="pt-2 border-t border-gray-800 flex items-center justify-between text-xs text-gray-400">
+                <span className="flex items-center gap-1.5 text-sky-400 font-bold">
+                  <Activity className="w-4 h-4" /> Uji In-Vitro Terverifikasi
+                </span>
+                <span className="text-[11px] text-gray-400">Rujukan PDR USA Sejak 2003</span>
               </div>
-
             </div>
           </div>
 
