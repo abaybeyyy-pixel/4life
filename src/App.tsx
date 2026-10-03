@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { products } from "./data";
 import { Product } from "./types";
 import Navigation from "./components/Navigation";
-import MidwifeTrack from "./components/MidwifeTrack";
+import ProductOverview from "./components/ProductOverview";
 import ProductDetailModal from "./components/ProductDetailModal";
 import TestimonialsSection from "./components/TestimonialsSection";
 import { 
@@ -125,7 +125,7 @@ export default function App() {
         
         {/* Unified Main Content */}
         <div id="home">
-          <MidwifeTrack 
+          <ProductOverview 
             onSelectProduct={handleSelectProductById} 
             onOpenConsultation={handleOpenConsultation}
           />

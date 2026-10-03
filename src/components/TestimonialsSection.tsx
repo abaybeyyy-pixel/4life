@@ -12,7 +12,7 @@ export default function TestimonialsSection() {
     if (activeTab === "Semua") {
       matchesTab = true;
     } else if (activeTab === "Konsumen") {
-      matchesTab = t.role === "Ibu" || t.role === "Keluarga" || t.role === "Konsumen";
+      matchesTab = t.role !== "Mitra Resmi" && t.role !== "Praktisi Kesehatan";
     } else if (activeTab === "Mitra") {
       matchesTab = t.role === "Mitra Resmi" || t.role === "Praktisi Kesehatan";
     }
@@ -105,7 +105,7 @@ export default function TestimonialsSection() {
 
             <div className="flex items-center gap-3 pt-4 border-t border-gray-100 mt-4">
               <span className="text-[11px] font-bold w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center border border-gray-200 uppercase tracking-wider shrink-0">
-                {t.name.split(',')[0].replace('Ibu ', '').replace('Bidan ', '').split(' ').map(n => n[0]).join('').slice(0, 2)}
+                {t.name.split(',')[0].replace('Dr. ', '').split(' ').filter(Boolean).map(n => n[0]).join('').slice(0, 2)}
               </span>
               <div>
                 <h4 className="text-xs font-bold text-gray-900 leading-tight">

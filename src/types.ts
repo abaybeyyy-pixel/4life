@@ -1,5 +1,5 @@
 /**
- * Types defining data structures for the 4Life Postpartum & Midwife Ecosystem landing page.
+ * Types defining data structures for the 4Life Transfer Factor Indonesia landing page.
  */
 
 export interface Product {

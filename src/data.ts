@@ -170,33 +170,33 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "t2",
-    name: "Ibu Fitri Rahmawati",
-    role: "Ibu",
+    name: "Fitri Rahmawati",
+    role: "Wirausaha",
     location: "Bandung",
     avatar: "👩",
-    tag: "Aktivitas Harian",
+    tag: "Aktivitas Padat",
     rating: 5,
-    text: "Pekerjaan rumah tangga dan merawat anak-anak sangat melelahkan, ditambah kurang tidur. Setelah rutin konsumsi TF Plus, daya tahan tubuh terasa stabil dan badan tidak gampang drop meskipun aktivitas padat."
+    text: "Pekerjaan harian dan mengelola usaha sangat menguras tenaga, sering kurang tidur. Setelah rutin konsumsi TF Plus, daya tahan tubuh terasa jauh lebih stabil dan badan tidak gampang lelah meskipun mobilitas tinggi."
   },
   {
     id: "t3",
-    name: "Pak Budi Santoso",
+    name: "Budi Santoso",
     role: "Keluarga",
     location: "Yogyakarta",
     avatar: "👨",
     tag: "Imun Keluarga",
     rating: 5,
-    text: "Sejak mengenalkan TF Tri-Factor ke seluruh keluarga kami, anak-anak dan istri menjadi lebih jarang sakit di masa pancaroba. Kami merasa jauh lebih terlindungi."
+    text: "Sejak mengenalkan TF Tri-Factor ke seluruh keluarga kami, kami menjadi lebih jarang sakit saat pergantian musim dan cuaca buruk. Kami merasa jauh lebih terlindungi."
   },
   {
     id: "t4",
-    name: "Ibu Dian Sastro",
-    role: "Ibu",
+    name: "Dian Permatasari",
+    role: "Karyawan Swasta",
     location: "Jakarta Selatan",
     avatar: "👩",
-    tag: "Kelelahan Berat",
+    tag: "Kelelahan Kerja",
     rating: 5,
-    text: "Kerja kantoran lembur tiap malam benar-benar menguras energi. Awalnya takut jatuh sakit, tapi berkat asupan TF Tri-Factor tubuh saya tetap bertenaga dan fit setiap hari. Rekomendasi terbaik!"
+    text: "Kerja kantoran lembur tiap malam benar-benar menguras energi. Awalnya takut jatuh sakit, tapi berkat asupan TF Tri-Factor tubuh saya tetap bertenaga dan fit setiap hari. Rekomendasi suplemen terbaik!"
   },
   {
     id: "t5",
@@ -210,13 +210,13 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "t6",
-    name: "Ibu Maria Ulfah",
+    name: "Maria Ulfah",
     role: "Keluarga",
     location: "Medan",
     avatar: "👩",
-    tag: "Proteksi Anak",
+    tag: "Daya Tahan Harian",
     rating: 5,
-    text: "Awalnya ragu, tapi demi memberikan proteksi terbaik untuk keluarga, kami coba konsumsi TF Tri-Factor. Hasilnya anak tumbuh aktif dan kami sendiri tidak mudah kena flu lagi saat cuaca buruk."
+    text: "Awalnya ragu, tapi demi memberikan proteksi terbaik untuk keluarga, kami coba konsumsi TF Tri-Factor. Hasilnya tubuh terasa fit dan kami tidak mudah tertular flu lagi saat cuaca pancaroba."
   },
   {
     id: "t7",
