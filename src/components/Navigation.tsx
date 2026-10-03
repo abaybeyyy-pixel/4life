@@ -38,9 +38,6 @@ export default function Navigation({ onOpenConsultation }: NavigationProps) {
           onClick={() => handleScroll("home")}
           className="flex items-center gap-2.5 cursor-pointer group text-left bg-transparent border-0 p-0"
         >
-          <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center p-1 overflow-hidden shadow-xs">
-            <img src="/transfer_factor.png" alt="4Life Logo" className="w-full h-full object-contain" />
-          </div>
           <div>
             <div className="flex items-center gap-1">
               <span className="font-sans font-extrabold text-gray-900 text-base tracking-tight">4Life <span className="text-blue-600">Indonesia</span></span>
