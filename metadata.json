@@ -1,0 +1,6 @@
+{
+  "name": "Portal Imun Keluarga",
+  "description": "Platform edukasi imunologi keluarga untuk ibu pasca melahirkan dan bayi bertenaga Transfer Factor 4Life Indonesia (imunkeluarga.com).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
